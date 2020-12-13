@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.photos {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.about {
+    color: rgb(250, 233, 233);
+    height: 100vh;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+}
+
+.about .text-area {
+    margin-top: 20px;
+    background-color: #FFF;
+    color: black;
+    width: 70%;
+    height: 90%;
+    border-right: 2px solid rgb(12, 11, 11);
+    margin-left: 20px;
+}
+
+.about .card {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sign-up {
+    background-image: url("https://i0.wp.com/www.golivegotravel.nl/wp-content/uploads/2016/07/samarkand-registan-afstand-1-scaled.jpg?fit=2048%2C1205&ssl=1");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    margin-top: 10px;
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.login-box a:hover {
+    color: #39dc79;
+}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
+
+@media screen and (max-width: 960px) {
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about .text-area {
+        width: 80%;
+        border: none;
+    }
+    .about .card {
+        bottom: 0;
+        margin-top: 20px;
+        display: none;
+    }
+}
